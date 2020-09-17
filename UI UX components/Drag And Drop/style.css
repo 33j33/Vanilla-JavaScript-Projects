@@ -12,7 +12,8 @@ h1 {
 
 .container {
     display: flex;
-    align-items: flex-start;
+    align-items:center;
+    justify-content: space-evenly;
     background-color:#ffb5a7;
     height: 200px;
 }
