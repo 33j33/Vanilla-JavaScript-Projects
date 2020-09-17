@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    background-color: #f8edeb;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: #FF8870;
+    font-size: 50px;
+    text-align: center;
+    margin: 10 auto;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    background-color:#ffb5a7;
+    height: 200px;
+}
+
+.empty-boxes {
+    border: 3px solid #4ea8de;
+    background-color: seashell;
+    height: 160px;
+    width: 160px;
+    min-width: 160px;
+    margin: 20px;
+}
+.full {
+    background-image: url('http://source.unsplash.com/random/150x150');
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+}
+.hold {
+    border: solid #341861 4px;
+    cursor: pointer;
+}
+.hovered{
+    background: #fcd5ce;
+    border-style: dashed;
+}
+.invisible {
+    display: none;
+}
