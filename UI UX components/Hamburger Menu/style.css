@@ -1,0 +1,94 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    height: 50px;
+    background-color: black;
+
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    width: 60%;
+    height: 100%;
+    list-style: none;
+
+
+}
+.nav-bar li a {
+    text-decoration: none;
+    color: white;
+}
+
+.landing-icon {
+    margin: 40px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div {
+    margin:auto;
+    text-align: center;
+    padding-left: 5px;
+    position: fixed;
+    bottom: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .line {
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin: 5px;
+    }
+    nav {
+        position: relative;
+        /*We make this relative so we can make .hamburger absolute relative to it */
+    }
+    .hamburger {
+        position: absolute;
+        top: 15%;
+        right: 2%;
+        z-index: 2;
+    }
+    .nav-bar{
+        display: none;
+        pointer-events: all
+    }
+    /* .nav-bar {
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        height: 80vh;
+        background-color: black;
+        margin: auto;
+        padding: 0;
+        clip-path: circle(100% at 90% -18%);
+        -webkit-clip-path: circle(100% at 90% -18%);
+        transition: all 1s ease-out;
+        /* transition: all 1s ease; */
+    .open {
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        height: 80vh;
+        background-color: black;
+        margin: auto;
+        padding: 0;
+        clip-path: circle(100% at 90% -18%);
+        -webkit-clip-path: circle(100% at 90% -18%);
+        pointer-events: all;
+        transition: all ease-out;
+    }
+
+}
+
+
