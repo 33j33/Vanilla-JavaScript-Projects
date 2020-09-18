@@ -1,5 +1,7 @@
 
-[!Image Carousel](./screenshots/screenshot1.JPG?raw=true "Image Carousel")
+<img src="./screenshots/screenshot1.JPG">
+
+<img src="./screenshots/screenshot2.JPG" width="300px">
 
 ### Learning Resources 
 
