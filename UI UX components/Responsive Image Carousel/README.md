@@ -1,4 +1,6 @@
 
+[!Image Carousel](./screenshots/screenshot1.JPG?raw=true "Image Carousel")
+
 ### Learning Resources 
 
 https://www.w3schools.com/css/css_overflow.asp
