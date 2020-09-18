@@ -1,0 +1,116 @@
+@import url('https://fonts.google.com/specimen/Roboto?selection.family=Roboto');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.image {
+    position: absolute; /*Image position is set absolute in relation to the carousel*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+.image .text-card{
+    position: absolute;
+    bottom: 30px;
+    left: -600px; /* negative value puts it out of the screen */
+    opacity: 0;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px;
+}
+
+.image .text-card h1{
+    font-size: 30px;
+}
+
+/* Whatever image and current class come together, it becomes visible */
+.image.current{
+    opacity: 1;
+}
+
+.image.current .text-card {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in 0.5s
+}
+
+/* Buttons */
+#next{
+    position: absolute;
+    top: 40%;
+    right: 15px;
+    opacity: 0.4;
+    z-index: 2;
+    border-radius: 60%;
+    outline: none;
+    cursor: pointer;
+}
+
+#prev {
+    position: absolute;
+    top: 40%;
+    left:15px;
+    opacity: 0.4;
+    z-index: 2;
+    border-radius: 60%;
+    outline:none;
+    cursor: pointer;
+}
+#next:hover {
+    opacity: 1;
+}
+#prev:hover {
+    opacity: 1;
+}
+
+/* ==> Background Images */
+
+.image:nth-child(1){
+    background: url('images/image1.jpg') no-repeat center center/cover;
+}
+.image:nth-child(2){
+    background: url('images/image2.jpg') no-repeat center center/cover;
+
+}
+.image:nth-child(3){
+    background: url('images/image3.jpg') no-repeat center center/cover;
+}
+.image:nth-child(4){
+    background: url('images/image4.jpg') no-repeat center center/cover;
+}
+.image:nth-child(5){
+    background: url('images/image5.jpg') no-repeat center center/cover;
+}
+
+@media (max-width: 700px) {
+    .image .text-card {
+      bottom: -200px;
+      left: 0;
+      width: 100%;
+    }
+  
+    .image.current .text-card {
+        transform: translateY(-230px);
+        transition: all 0.7s ease-in 0.5s
+    }
+  }
+  
