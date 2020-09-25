@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.08em;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(90deg, hsla(202, 71%, 27%, 1) 0%, hsla(176, 45%, 66%, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    max-width: 300px;
+    margin-top: 40px;
+    grid-template-rows: minmax(80px, auto) repeat(5, 1fr);
+    /* minmax() takes two values min and max, so here 
+    first row width would be 120px and max would be auto
+    After that all rows will have a width of 1fr*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "o o o o"
+    "AC AC DEL division"
+    "one two three mul"
+    "four five six sum"
+    "seven eight nine sub"
+    "decimal zero equal equal";
+    grid-gap: 3px;
+}
+.container > button {
+    height: 3.5em;
+    font-size: large;
+    font-weight: 600;
+    background: rgba(255,255, 255, 0.7);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.container > button:hover{
+    background-color: rgba(255,255, 255, 0.9);
+}
+.output {
+    grid-area: o;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(131, 211, 12);
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+    /* word-wrap and word-break are used that digits can move onto next line
+    when the number becomes too large */
+}
+.output .previous-operand {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.4);
+}
+.output .current-operand {
+    font-weight: 700;
+}
+.AC {
+    grid-area: AC;
+}
+.DEL {
+    grid-area: DEL
+}
+.division {
+    grid-area: division;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.mul {
+    grid-area: mul;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.sum {
+    grid-area: sum;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.sub {
+    grid-area: sub;
+}
+.decimal {
+    grid-area: decimal;
+}
+.zero {
+    grid-area: zero;
+}
+.equal {
+    grid-area: equal;
+}
