@@ -1,4 +1,4 @@
-<img src="./screenshot/screenshot1.png">
+<img src="./screenshot/screenshot1.PNG">
 
 ### Learning Resources
 
