@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(197, 243, 196);
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    font-family: 'Secular One', sans-serif;
+    border-radius: 10px;
+    color:rgb(0, 0, 0) ;
+    background-color: white;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10vh;
+    color: rgb(120, 206, 22);
+    text-shadow: 2px 4px rgb(4, 49, 4);
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    font-weight: 500;
+}
+#score{
+    width: 50%;
+    height: 10%;
+    background-color: rgb(39, 223, 236);
+    border-radius: 10px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.board {
+    /* Both height and width are given same value to create max square
+    possible in the viewport */
+    width: 90vmin;
+    height: 90vmin;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(245, 245, 245);
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+}
+
+.snake {
+    background-color: rgb(78, 214, 44);
+    border: 0.20vmin solid rgb(0, 0, 0)
+}
+.food {
+    background-color: rgb(236, 69, 57);
+    border-radius: 70%;
+    border: 0.20vmin solid rgb(78, 3, 3);
+}
