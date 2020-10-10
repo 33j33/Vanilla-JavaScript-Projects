@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div id="savings">
+                <div class="title">Savings</div>
+                <div class="value">$1000</div>
+            </div>
+            <div id="income-container">
+                <div id="income">
+                    <div class="title">Income</div>
+                    <div class="value">$50000</div>
+                </div>
+                <div id="pie-chart"></div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="title">Dashboard</div>
+            <div class="tab">
+                <div class="tab1">Expenses</div>
+                <div class="tab2">Income</div>
+                <div class="tab3 active">All</div>
+            </div>
+            <div class="hide" id="expense-tab"></div>
+            <div id="income-tab">
+                <ul class="list">
+                    <li id="0">
+                        <div class="entry"></div>
+                        <div id="edit"></button>
+                            <div id="delete"></button>
+                    </li>
+                </ul>
+                <div class="input">
+                    <input type="text" name="amount" id="amount" placeholder="Amount">
+                    <input type="text" name="value" id="value" placeholder="$0">
+                </div>
+                <div id="add-amount"></div>
+            </div>
+            <div class="hide" id="all-tab"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
