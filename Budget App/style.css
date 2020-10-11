@@ -4,7 +4,14 @@ body {
     background-color:#f1faee;
     display: grid;
     place-items: center;
+    box-sizing: border-box;
     /* Makes the child element super-centered (horizontal and vertically centered) */
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 .container {
     width: auto;
@@ -52,8 +59,90 @@ body {
 
 .dashboard .heading {
     margin: 10px;
-    font-size: 1.7em;
+    font-size: 1.9em;
+    text-align: center;
 }
-.dashboard .tab{
+.dashboard .tabs{
     margin: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(3, 120px);
+    background-color: ghostwhite;
+    border-radius: 5px;
+    min-height: 300px;
+}
+.dashboard .tabs .tab{
+    color: rgb(110, 104, 104);
+    background-color: #bfcfcf;
+    text-align: center;
+    border: 1px black solid;
+    font-size: 1.2em;
+}
+.dashboard .tabs .tab.active{
+    color: black;
+    background-color: #95a5a5;
+}
+.dashboard .tabs .tab:hover{
+    background-color: #95a5a5;
+    cursor: pointer;
+}
+.dashboard .tabs #tab1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.dashboard .tabs #tab2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.dashboard .tabs #tab3 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.dashboard .tabs .tab-content{
+    grid-row: 2/3;
+    grid-column: 1/4;
+    display: none;
+}
+.dashboard .tabs .tab-content.active{
+    display: grid;
+}
+
+
+.dashboard .list {
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .list li {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    margin: 4px;
+    border-bottom: 1px solid darkgray;
+}
+.dashboard .list li .entry{
+    grid-column: 1/2;
+}
+.dashboard .list li .edit{
+    grid-column: 2/3;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.dashboard .list li .delete{
+    grid-column: 3/4;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.dashboard .tab-content .input {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: end;
+}
+.dashboard .tab-content .input #amount, #value{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border:1px solid black;
+    text-align: center;
 }

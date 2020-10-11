@@ -27,38 +27,46 @@
         </div>
         <div class="dashboard">
             <div class="heading">Dashboard</div>
-            <div class="tab">
-                <div class="tab1">Expenses</div>
-                <div class="tab2">Income</div>
-                <div class="tab3 active">All</div>
-                <div class="hide" id="expense-tab">
+            <div class="tabs">
+                <!-- data-tab-target is a user defined data attribute -->
+                <div data-tab-target="#expense-tab" id="tab1" class="tab active">Expenses</div>
+                <div data-tab-target="#income-tab" id="tab2" class="tab">Income</div>
+                <div data-tab-target="#all-tab" id="tab3" class="tab">All</div>
+                <div class="active tab-content" id="expense-tab">
                     <ul class="list">
                         <li id="0">
-                            <div class="entry"></div>
-                            <div id="edit"></button>
-                                <div id="delete"></button>
+                            <div class="entry">$1000</div>
+                            <div class="edit"><img src="icons/edit.png"></div>
+                            <div class="delete"><img src="icons/delete.png"></div>
+                        </li>
+                        <li id="1">
+                            <div class="entry">$400</div>
+                            <div class="edit"><img src="icons/edit.png"></div>
+                            <div class="delete"><img src="icons/delete.png"></div>
                         </li>
                     </ul>
                     <div class="input">
                         <input type="text" name="amount" id="amount" placeholder="Amount">
                         <input type="text" name="value" id="value" placeholder="$0">
+                        <div class="add"><img src="icons/plus.png"></div>
                     </div>
                 </div>
-                <div id="income-tab">
+                <div class="tab-content" id="income-tab">
                     <ul class="list">
                         <li id="0">
-                            <div class="entry"></div>
-                            <div id="edit"></button>
-                                <div id="delete"></button>
+                            <div class="entry">$1000</div>
+                            <div class="edit"><img src="icons/edit.png"></div>
+                            <div class="delete"><img src="icons/delete.png"></div>
                         </li>
                     </ul>
                     <div class="input">
                         <input type="text" name="amount" id="amount" placeholder="Amount">
                         <input type="text" name="value" id="value" placeholder="$0">
+                        <div class="add"><img src="icons/plus.png"></div>
                     </div>
                     <div id="add-amount"></div>
                 </div>
-                <div class="hide" id="all-tab">
+                <div class="tab-content" id="all-tab">
                     <ul class="list">
 
                     </ul>
