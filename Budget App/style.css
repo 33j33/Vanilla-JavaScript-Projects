@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=PT+Sans&display=swap');
+body {
+    margin: 0;
+    background-color:#f1faee;
+    display: grid;
+    place-items: center;
+    /* Makes the child element super-centered (horizontal and vertically centered) */
+}
+.container {
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Fjalla One', sans-serif;
+    
+}
+
+
+.card {
+    grid-column: 1/2;
+    border: 2px black solid;
+    background-color: #1d3557;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card #savings, #income-container{
+    margin: 10px;
+}
+.card .value {
+    margin-top: 10px;
+    font-size: 2.5em;
+}
+.card hr {
+    border: 1.5px solid white;
+    border-radius: 2px;
+    width: 90%;
+}
+.card #income-container {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.dashboard {
+    grid-column: 2/4;
+    background-color: #a8dadc;
+    border-radius: 0px 15px 15px 0px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.dashboard .heading {
+    margin: 10px;
+    font-size: 1.7em;
+}
+.dashboard .tab{
+    margin: 10px;
+}
