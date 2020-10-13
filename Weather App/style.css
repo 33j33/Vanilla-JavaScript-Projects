@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgba(255, 255,255, 0.2);
+    border: 2px solid rgba(255, 255,255, 0.5);
+    border-radius: 2%;
+}
+header input {
+    min-width: 200px;
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px 15px 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255,255, 0.3);
+    border-radius: 8px;
+    border-bottom: 4px solid black;
+    font-weight: 200;
+    font-size: 15px;
+    transition: 0.2s ease-in;
+}
+header input:focus{
+    background-color: rgba(255, 255,255, 0.6);
+    color: rgba(34, 34, 34, 0.8);
+}
+
+main {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    color: white;
+}
+.location .city {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.location .date {
+    font-size: 16px;   
+}
+.weather-status .temp {
+    font-size: 100px;
+    font-weight: 900;
+    text-shadow: 3px 10px rgba(0,0,0, 0.8);
+}
+.weather-status .icon {
+    border-radius: 40px;
+    background-color: rgba(255, 255,255, 0.5);
+    outline: none;
+}
+.weather-status .type{
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 2px rgba(0,0,0, 0.8);
+}
+.weather-status .hi-low span{
+    font-size: 15px;
+    padding: 5px;
+}
+.weather-status .hi-low{
+    font-weight: 600;
+}
