@@ -2,7 +2,7 @@
 
 **Desktop View**
 
-<img src="screenshots/1.PNG" width="80%">
+<img src="screenshots/1.PNG">
 
 **Mobile View**
 
