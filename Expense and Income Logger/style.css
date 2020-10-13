@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=PT+Sans&display=swap');
+body {
+    margin: 0;
+    background-color:#f1faee;
+    display: grid;
+    /* Makes the child element super-centered (horizontal and vertically centered) */
+    place-items: center;
+}
+* {
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.container {
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: minmax(250px, auto) minmax(350px, auto);
+    grid-template-rows: auto 1fr;
+    font-family: 'Fjalla One', sans-serif;
+    
+}
+
+.container h1 {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    color: #1d3557;
+}
+
+.card {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    border: 2px black solid;
+    background-color: #1d3557;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card #savings, #income-container, #expenses{
+    margin: 10px;
+}
+.card .value {
+    margin-top: 10px;
+    font-size: 2.5em;
+}
+.card hr {
+    border: 1.5px solid white;
+    border-radius: 2px;
+    width: 90%;
+}
+
+.dashboard {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: #a8dadc;
+    border-radius: 0px 15px 15px 0px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.dashboard .heading {
+    margin: 10px;
+    font-size: 1.9em;
+    text-align: center;
+}
+
+/* Tabs styling */
+.dashboard .tabs{
+    margin: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: ghostwhite;
+    border-radius: 5px;
+    min-height: 300px;
+}
+.dashboard .tabs .tab{
+    color: rgb(110, 104, 104);
+    background-color: #bfcfcf;
+    text-align: center;
+    border: 1px black solid;
+    font-size: 1.2em;
+}
+.dashboard .tabs .tab.active{
+    color: black;
+    background-color: #95a5a5;
+}
+.dashboard .tabs .tab:hover{
+    background-color: #95a5a5;
+    cursor: pointer;
+}
+.dashboard .tabs #tab1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.dashboard .tabs #tab2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.dashboard .tabs #tab3 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.dashboard .tabs .tab-content{
+    grid-row: 2/3;
+    grid-column: 1/4;
+    display: none;
+}
+.dashboard .tabs .tab-content.active{
+    display: grid;
+}
+
+/* List Styling */
+
+.dashboard .list {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .list li {
+    display: grid;
+    grid-template-columns: minmax(240px, auto) auto auto;
+    align-items: center;
+    margin: 4px;
+    border-bottom: 1px solid darkgray;
+}
+.dashboard .list li .entry{
+    grid-column: 1/2;
+}
+.dashboard .list li .entry.expense span {
+    color: #e65339;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.dashboard .list li .entry.income span {
+    color: #254572;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.dashboard .list li .edit{
+    grid-column: 2/3;
+    margin-right: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.dashboard .list li .edit img:hover{
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 1px 1px 2px 0px rgb(7, 125, 161);
+}
+
+.dashboard .list li .delete{
+    grid-column: 3/4;
+    margin-right: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.dashboard .list li .delete img:hover{
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 1px 1px 2px 0px rgb(7, 125, 161);
+}
+
+/* Input Fields and Button Styling */
+
+.dashboard .tab-content .input {
+    display: flex;
+    justify-content: space-around;
+    align-self: end;
+}
+.dashboard .tab-content .input #type, #value{
+    border-radius: 2px;
+    margin-bottom: 10px;
+    margin-right: 2px;
+    padding: 4px;
+    border:1px solid black;
+    text-align: center;
+    font-family: inherit;
+    width: 40%;
+}
+.dashboard .tab-content .input #type:hover, #value:hover{
+   border: 2px solid rgb(10, 168, 207);
+}
+.dashboard .tab-content .input .add img{
+    cursor: pointer;
+    border-radius: 50%;
+}
+.dashboard .tab-content .input .add img:hover{
+  
+    border: 2px solid rgb(10, 168, 207);
+}
+
+
+/* Media Query */
+
+
+@media only screen and (max-width: 600px){
+
+    .container{
+        display: grid;
+        margin-top: 4px;
+        grid-template-columns: 95vw;
+        grid-template-rows: auto auto auto;
+        gap: 4px 0px
+    }
+    .container h1 {
+        margin: 2px;
+        grid-row: 1/2;
+        grid-column: 1/1;
+    }
+    .card {
+        grid-row: 2/3;
+        grid-column: 1/1;
+    }
+    .card #savings, #income-container, #expenses{
+        margin: 4px;
+    }
+    .card .value {
+        margin-top: 4px;
+        font-size: 1.7em;
+    }
+    .dashboard {
+        grid-row: 3/4;
+        grid-column: 1/1;
+        border-radius: 10px;
+    }
+    .dashboard .list {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .dashboard .tab-content .input {
+        width: 90vw;
+    }
+    .dashboard .tab-content .input #type, #value{
+        width: 40vw;
+    }
+    
+    
+}
