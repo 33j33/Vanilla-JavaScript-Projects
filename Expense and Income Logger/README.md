@@ -6,7 +6,7 @@
 
 **Mobile View**
 
-<img src="screenshots/2.PNG" width="40%">
+<img src="screenshots/2.png" width="40%">
 
 ### Learning Resources 
 
