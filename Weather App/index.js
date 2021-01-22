@@ -10,7 +10,7 @@ function setSearchQuery(event) {
 }
 
 function getQueryResults(val) {
-    url = `http://api.openweathermap.org/data/2.5/weather?q=${val}&APPID=${SECRET}&units=metric`
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${val}&APPID=${SECRET}&units=metric`
     fetch(url)
         .then((response) => {
             return response.json()
@@ -21,7 +21,11 @@ function getQueryResults(val) {
 }
 
 function displayResponse(data) {
-    console.log(data)
+    if (data.cod !== 200) {
+        search.classList.add("active");
+        return
+    }
+    search.classList.remove("active");
     const city = document.querySelector(".location .city");
     city.innerText = `${data.name}, ${data.sys.country}`;
 

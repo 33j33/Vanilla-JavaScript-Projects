@@ -44,6 +44,11 @@ header input:focus{
     background-color: rgba(255, 255,255, 0.6);
     color: rgba(34, 34, 34, 0.8);
 }
+header .search.active {
+    background-color: rgba(241, 152, 146, 0.877);
+    border: 2px solid rgb(99, 11, 5);
+    color: rgb(77, 3, 3);
+}
 
 main {
     padding: 25px;
