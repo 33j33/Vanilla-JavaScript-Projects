@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" defer src="index.js"></script>
 </head>
 
 <body>
     <div class="calc-container">
-        <div></div>
+        <div id="error"></div>
         <div class="wrapper">
             <span class="sub-text bill">Bill</span>
-            <input type="number" id="bill" class="val" value="0.0" placeholder="Enter Bill Amount" />
+            <input type="number" id="bill" value="0.0" placeholder="Enter Bill Amount" />
         </div>
         <div class="wrapper">
             <span class="sub-text tip">Tip</span>
@@ -33,7 +33,7 @@
                 <span id="tip-percent" class="val">15</span>
             </div>
             <div>
-                <input type="range" min="1" max="100" value="15">
+                <input id="tip-percent-input" type="range" min="0" max="100" value="15">
             </div>
         </div>
         <div class="container">
@@ -42,7 +42,7 @@
                 <span id="people" class="val">1</span>
             </div>
             <div>
-                <input type="range" min="1" max="100" value="1">
+                <input id="people-input" type="range" min="1" max="100" value="1">
             </div>
         </div>
         <div class="per-person container">

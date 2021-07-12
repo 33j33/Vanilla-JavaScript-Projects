@@ -86,8 +86,12 @@ input[type="number"] {
   padding: 5px 1px;
   text-align: center;
 }
-#bill:focus {
-  font-size: larger;
+#bill:focus,
+#bill.active {
+  font-size: 1.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: right;
+  color: var(--color-3);
 }
 #bill:focus::placeholder {
   color: transparent;
